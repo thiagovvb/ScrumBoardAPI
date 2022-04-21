@@ -1,0 +1,30 @@
+{
+  "name": "scrumboard",
+  "version": "1.0.0",
+  "description": "This is the backend for the Scrumboard project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagovvb/ScrumBoardAPI.git"
+  },
+  "author": "Thiago Batista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagovvb/ScrumBoardAPI/issues"
+  },
+  "homepage": "https://github.com/thiagovvb/ScrumBoardAPI#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
+  }
+}
