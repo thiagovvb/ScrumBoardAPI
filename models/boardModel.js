@@ -10,7 +10,8 @@ const boardSchema = new Schema({
         {
             categoryTitle: {
                 type: String,
-                required: true
+                required: true,
+                unique: true
             },
             tags: [
                 {
@@ -26,7 +27,6 @@ const boardSchema = new Schema({
                     responsibleId: {
                         type: Schema.Types.ObjectId,
                         ref:'User',
-                        required: true
                     },
                     points: Number,
                 }

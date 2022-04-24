@@ -13,11 +13,11 @@ module.exports.postUser = (req,res,next) => {
 
     userModel
         .save()
-        .then( result => {
+        .then(result => {
             res.status(200).send(result)
         })
         .catch(error => {
-            res.status(500).send("Houve um erro na requisição")
+            res.status(500).send("Houve um erro no salvamento no banco de dados", error)
         });
 };  
 
@@ -30,6 +30,6 @@ module.exports.getUser = (req,res,next) => {
                .send(user);
         })
         .catch(error =>{
-            res.status(500).send("Houve um erro na requisição")
+            res.status(500).send("Houve um erro na requisição", error)
         })
 }   

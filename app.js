@@ -2,7 +2,9 @@ require('dotenv/config')
 const express = require("express");
 const bodyParser = require("body-parser")
 const mongoose = require('mongoose')
+
 const adminRoutes = require('./routes/admin')
+const boardRoutes = require('./routes/scrum-board')
 
 const app = express();
 
@@ -11,6 +13,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/admin',adminRoutes)
+app.use(boardRoutes)
 
 mongoose.connect(`mongodb+srv://${process.env.MONGOUSER}:${process.env.MONGOPASSWORD}@tcluster.dy2za.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
         .then(()=> {
